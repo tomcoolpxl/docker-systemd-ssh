@@ -12,10 +12,11 @@ RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == system
   rm -f /lib/systemd/system/basic.target.wants/*;\
   rm -f /lib/systemd/system/anaconda.target.wants/*;
 
-# install openssh and basic tools
-RUN yum -y update; \
-  yum install -y epel-release ; \
-  yum -y install openssh-server openssh-clients vim sudo passwd iproute bind-utils traceroute curl git htop wget httpie ; \
+# install openssh, basic tools and mapages
+RUN sed -i '/tsflags=nodocs/d' /etc/yum.conf && \
+  yum -y update && \
+  yum install -y epel-release && \
+  yum -y install openssh-server openssh-clients man-pages man-db man vim nano ne sudo passwd iproute iputils bind-utils traceroute curl git htop wget httpie && \
   yum clean all
 
 # add user
