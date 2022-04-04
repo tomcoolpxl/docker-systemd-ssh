@@ -7,6 +7,19 @@ The containers use a systemd or systemd-like process as their main process (PID 
 
 ## Usage
 ### Centos
+Start the container in the following manner.
+```
+docker run -d --name systemd-centos --tmpfs /tmp --tmpfs /run --tmpfs /run/lock -v /sys/fs/cgroup:/sys/fs/cgroup:ro -it -P tomcoolpxl/centos7-systemd-ssh:latest
+```
+Find out to which host port container port 22 is connected.
+```
+docker inspect systemd-centos| grep HostPort
+```
+You can now ssh into the container using the host port printed above, as the user 'user', password 'pxl'.
+```
+ssh user@localhost -p xxxx
+```
+
 ### Ubuntu
 Start the container, as you would do with any container.
 ```
