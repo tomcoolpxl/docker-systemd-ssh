@@ -3,7 +3,7 @@ Docker containers with systemd and ssh that can be used for generic, educational
 
 Apart from having limited systemd functionality, the containers come with a pre-configured ssh service and a pre-configured user. Extra tools are installed, so the containers can be used for general-purpose courses or examples.
 
-The containers use a systemd or systemd-like process as their main process (PID 1), which means they will be continuously running unless explicitely stopped. This goes against the ephemeral nature of containers, but these containers with vm-like qualities are only meant for experimentation.
+The containers use a systemd or systemd-like process as their main process (PID 1), which means they will be continuously running unless explicitely stopped. This goes against the ephemeral nature of containers, but these containers with vm-like qualities are only meant for experimentation or computing labs.
 
 ## Usage
 ### Centos
