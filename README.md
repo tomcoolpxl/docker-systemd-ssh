@@ -8,6 +8,19 @@ The containers use a systemd or systemd-like process as their main process (PID 
 ## Usage
 ### Centos
 ### Ubuntu
+Start the container, as you would do with any container.
+```
+docker run -d --name systemd-ubuntu -it -P tomcoolpxl/ubuntu-20.04-systemd-ssh:latest
+```
+Find out to which host port container port 22 is connected.
+```
+docker inspect systemd-ubuntu | grep HostPort
+```
+You can now ssh into the container using the host port printed above, as the user 'user', password 'pxl'.
+```
+ssh user@localhost -p xxxx
+```
+
 ## Installed Software
 - limited functionality systemd
 - openssh service with enabled password authentication
