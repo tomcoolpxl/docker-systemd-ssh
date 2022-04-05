@@ -10,7 +10,7 @@ The containers use a systemd or systemd-like process as their main process (PID 
 
 docker hub tag: tomcoolpxl/centos7-systemd-ssh
 
-see https://hub.docker.com/repository/docker/tomcoolpxl/centos7-systemd-ssh
+see https://hub.docker.com/repository/docker/tomcoolpxl/centos-systemd-ssh
 
 Start the container in the following manner.
 ```
@@ -29,7 +29,7 @@ ssh user@localhost -p xxxx
 
 docker hub tag: tomcoolpxl/ubuntu-20.04-systemd-ssh
 
-see https://hub.docker.com/repository/docker/tomcoolpxl/ubuntu-20.04-systemd-ssh
+see https://hub.docker.com/repository/docker/tomcoolpxl/ubuntu-systemd-ssh
 
 Start the container, as you would do with any container.
 ```
